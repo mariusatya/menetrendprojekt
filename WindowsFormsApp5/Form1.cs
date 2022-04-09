@@ -66,9 +66,13 @@ namespace WindowsFormsApp5
                     {
                         var indulasihely = data["results"]["talalatok"][$"{i}"]["indulasi_hely"];
                         var erkezesihely = data["results"]["talalatok"][$"{i}"]["erkezesi_hely"];
-                        var erkezesiido = data["results"]["talalatok"][$"{i}"]["indulasi_ido"];
-                        var indulasiido = data["results"]["talalatok"][$"{i}"]["erkezesi_ido"];
-                        listBox1.Items.Add ($"{indulasihely} {indulasiido} - {erkezesihely} {erkezesiido}");
+                        var indulasiido = data["results"]["talalatok"][$"{i}"]["indulasi_ido"];
+                        var erkezesiido = data["results"]["talalatok"][$"{i}"]["erkezesi_ido"];
+                        var atszallas = data["results"]["talalatok"][$"{i}"]["atszallasok_szama"];
+                       // var atszallasinfok = data["results"]["talalatok"][$"{i}"]["atszallasinfok"]["1"]["atszallohely"];
+                        var osszido = data["results"]["talalatok"][$"{i}"]["osszido"];
+
+                        listBox1.Items.Add ($"{indulasihely} {indulasiido} - {erkezesihely} {erkezesiido} -- Összidő:{osszido} Átszállás: {atszallas}");
 
 
 
